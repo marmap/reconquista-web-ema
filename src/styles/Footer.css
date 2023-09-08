@@ -1,0 +1,115 @@
+.footer-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  .logoF{ 
+    position:relative;
+    top: 50px; left: 570px;
+    font-family: Montaga;
+  color: #8E0303;
+  font-size: 36px;
+  }
+  
+.botonN{
+    color: #8E0303;
+font-family: 'Montaga';
+font-size: 24px;
+position:relative;
+top: 20px; left: 100px;
+
+}  
+
+.botonD{
+  color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: 20px; left: 100px;
+
+}  
+.botonQ{
+  color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: -50px; left: 1000px;
+
+}
+
+.version{
+  color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: -50px; left: 1000px;
+
+}
+
+.año{
+  color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: -20px; left: 500px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    background: white;
+    border: 1px solid;
+    border-radius: 5px;
+    width:527px;
+    height: 200px;
+  }
+  .logoF{ 
+    position:relative;
+    top: 20px; left: 150px;
+    font-family: Montaga;
+  color: #8E0303;
+  font-size: 36px; 
+  cursor: pointer;
+  width:200px;
+  text-align: center;
+  }
+  
+.botonN{
+    color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: 20px; left: 5px;
+cursor: pointer;
+width:200px;
+text-align: center;
+}  
+
+.botonD{
+  color: #8E0303;
+font-family: Montaga;
+font-size: 24px;
+position:relative;
+top: -20px; left: 320px;
+cursor: pointer;
+width:200px;
+text-align: center;
+}  
+
+
+.año{
+  color: #8E0303;
+font-family: 'Montaga';
+font-size: 20px;
+position:relative;
+top: 20px; left: 70px;
+width:400px;
+text-align: center;
+}
+}

@@ -1,0 +1,101 @@
+.container-fluid{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  background: #8E0303;
+  height:100px;
+  color:white;
+}
+
+.navbar-brand{
+  position: relative;
+  font-family: 'Montaga';
+  font-size: 70px;
+  top: 0;
+  left: 70px;
+}
+
+.nav-item{
+  font-family: 'Montaga';
+  font-size: 20px;
+  left: 40px;
+  color:white;
+  
+}
+
+.imageLogo{
+  display: flex;
+  position: relative;
+  width: 130px; 
+  height: auto;
+  top: 30px;
+  left:60px;
+  margin-left: 0px ;
+  border-radius: 50%;
+  border: 7px solid #8E0303; 
+  shadow:20px #8E0303;
+}
+
+.lema{
+  display: flex;
+  position: relative;
+  top: 40px;
+  left:-140px;
+  font-size: 10px;
+  font-family: 'Montaga';
+}
+
+@media(max-width: 768px){
+  .navbar-brand{
+    position: relative;
+    font-family: 'Montaga';
+    font-size: 140px;
+    top: -10px;
+    left: -120px;
+    border-radius: 6px;
+   
+  }
+  
+  .nav-item{
+    font-family: 'Montaga';
+    font-size: 20px;
+    left: 40px;
+    color:white;
+    
+  }
+
+  .lema{
+    display: flex;
+    flex-direction:row;
+    position: relative;
+    top: -80px;
+    left:160px;
+    font-size: 10px;
+    font-family: 'Montaga';
+    max-width: 300px;
+    height:30px;
+  }
+  .imageLogo{
+    display: flex;
+    position: relative;
+    width: 130px; 
+    height: auto;
+    top: 20px;
+    left:20px;
+    margin-left: 0px ;
+    border-radius: 50%;
+    border: 7px solid #8E0303; 
+    shadow:20px #8E0303;
+  }
+.navbar-toggler{
+  display: flex;
+  position: relative;
+  top: -110px;
+  left:0px;
+  border: 2px solid #fff; 
+}
+
+}

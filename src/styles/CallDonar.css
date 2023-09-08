@@ -1,0 +1,117 @@
+.contenedor{
+    width: 1295px;
+    height: 120px;
+    background: white;
+    display: flex;
+    border: 1px solid;
+}
+
+.frase{
+    color: black;
+    font-size: 30px;
+    font-family: 'Montaga';
+    padding: 10px 20px;
+    position: center;
+}
+
+.botonA{
+    background: #8E0303;
+    width: 90px;
+    height: 30px;
+    color: white;
+    border-radius: 2px;
+    font-size: 20px;
+    font-family: 'Montaga';
+    position: relative;
+    top: 60px; left: -40px;
+    shadow:90px #8E0303;
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.botonA:hover{
+    background-color: red;
+    width: 90px;
+    height: 30px;
+    position: relative;
+}
+
+.botonC{
+    background: white;
+    width: 130px;
+    height: 30px;
+    color: black;
+    border-radius: 2px;
+    font-family: 'Montaga' bold;
+    font-size: 20px;
+    position: relative;
+    top: 60px; left: -30px;
+    shadow:90px #8E0303;
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.botonC:hover{
+    color:white;
+    background-color: grey;
+}
+
+@media (max-width: 768px){
+    .contenedor{
+        width: 520px;
+        height: 150px;
+        background: white;
+        display: flex;
+        border: 1px solid;
+    }
+    
+    .frase{
+        color: black;
+        font-size: 20px;
+        font-family: 'Montaga' bold;
+        padding: 10px 20px;
+        position: center;
+    }
+    
+    .botonA{
+        background: #8E0303;
+        width: 90px;
+        height: 30px;
+        color: white;
+        border-radius: 2px;
+        font-size: 16px;
+        position: relative;
+        top: 90px; left: -30px;
+        shadow:90px #8E0303;
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .botonA:hover{
+        background-color: red;
+        width: 90px;
+        height: 30px;
+        position: relative;
+    }
+    
+    .botonC{
+        background: white;
+        width: 130px;
+        height: 30px;
+        color: black;
+        border-radius: 2px;
+        font-size: 16px;
+        position: relative;
+        top: 90px; left: -20px;
+        shadow:90px #8E0303;
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .botonC:hover{
+        color:white;
+        background-color: grey;
+    }
+}
