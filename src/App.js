@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Inicio from './Inicio';
@@ -7,25 +8,30 @@ import Footer from './Footer';
 import Donar from './Donar';
 import QuienesSomos from './QuienesSomos';
 import RedactarNoticia from './RedactarNoticia';
+import NoticiaIndividual from './NoticiaCuerpo';
+import AbrirSesion from './AbrirSesion';
 
 
 
 function App() {
   return (
     <div>
-    <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/QuienesSomos" element={<QuienesSomos />} />
         <Route path="/Donar" element={<Donar />} />
         <Route path="/RedactarNoticia" element={<RedactarNoticia />} />
+        <Route path="/noticia/:id" element={<NoticiaIndividual />} />
         <Route path="*" element={<NotFound />} />
+        <Route path='/AbrirSesion' element={<AbrirSesion />}/>
       </Routes>
-    <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
 
 

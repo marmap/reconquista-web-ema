@@ -1,0 +1,10 @@
+.h5{
+    width: 100%;
+  max-width: 686px;
+  font-size: 24px;
+  font-family: Montaga;
+  font-weight: 400;
+  line-height: 36px;
+  word-wrap: break-word;
+  margin: 20px 0;
+}

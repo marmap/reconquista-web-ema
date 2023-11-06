@@ -1,6 +1,6 @@
 import React from 'react';
-import './NoticiaCuerpo.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const NoticiaCuerpo = ({ title, description, imageUrl, isAdmin }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/Footer.css'; 
-
+import './styles/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = ({ isAdmin = true }) => {
   return (
@@ -8,14 +8,14 @@ const Footer = ({ isAdmin = true }) => {
       <div className='logoF'>Reconquista</div>
       <div className='botonN'>Publicaciones</div>
       {isAdmin ? (
-        <div className='botonD'>Abrir sesión</div>
+        <Link className='botonD' to='/src/AbrirSesion.js'>Abrir sesión</Link>
       ) : (
-        <div className='botonD'>Cerrar sesión</div>
+        <Link className='botonD' to='./App.js'>Cerrar sesión</Link>
       )}
       <div className='año'>© Reconquista, Inc. 2023. Noticias católicas</div>
     </div>
   );
-} 
+}
 
 export default Footer;
 
