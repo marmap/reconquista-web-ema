@@ -1,3 +1,4 @@
+import express from 'express';
 import dbConfig from '/node/database/dbConfig.js';
 import cors from 'cors';
 import NoticiasRoutes from '/node/routes/routes.js';

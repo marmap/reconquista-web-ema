@@ -1,8 +1,8 @@
 import { Sequelize } from 'sequelize';
 
-const dbConfig = new Sequelize('publicaciones', 'root', '',{
+const dbConfig = new Sequelize('publicaciones', 'Marcos', '',{
   host:'localhost',
-  dialect: 'mysql2'
+  dialect: 'mysql'
 })
 
 
