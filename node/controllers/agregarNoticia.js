@@ -1,5 +1,6 @@
 import noticia from '../models/noticia';
 
+
 // Mostrar todas las noticias
 export const mostrarNoticias = async (req, res) => {
   try {
