@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 16:42:45
+-- Tiempo de generación: 24-11-2023 a las 14:44:29
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,15 +33,17 @@ CREATE TABLE `noticias` (
   `resumen` varchar(255) DEFAULT NULL,
   `cuerpo` varchar(1200) NOT NULL,
   `foto_url` varchar(255) DEFAULT NULL,
-  `fecha_publicacion` date DEFAULT NULL
+  `createdAt` date DEFAULT NULL,
+  `updatedAt` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `noticias`
 --
 
-INSERT INTO `noticias` (`id`, `titulo`, `resumen`, `cuerpo`, `foto_url`, `fecha_publicacion`) VALUES
-(1, 'Partido cerrado', '[value-3]', '[value-4]', '[value-5]', '0000-00-00');
+INSERT INTO `noticias` (`id`, `titulo`, `resumen`, `cuerpo`, `foto_url`, `createdAt`, `updatedAt`) VALUES
+(1, 'Perdio Talleres ante Colon por  3 a 0', '“El Sabalero” venció al “Matador” en el Cementerio de los Elefantes por 3-0, con goles de Perlaza, Ábila y Galván. \"La T\" no pudo asegurar su clasificación a la Libertadores y deberá ganar ante Independiente.', 'Colón de Santa Fe goleó este domingo con contundencia por 3 a 0 a Talleres y se aferró a la ilusión de continuar en Primera División, en un partido correspondiente a la decimotercera fecha de la Zona B de la Copa de la Liga que dejó la lucha por la permanencia al rojo vivo.', 'https://www.cadena3.com/admin/playerswf/fotos/ARCHI_1034888.jpg', '0000-00-00', '0000-00-00'),
+(3, 'Un titulo nuevo, editado', 'Aca va un resumen del texto un toque editado para hacer la prueba a ver que sale', '', NULL, '2023-11-22', '0000-00-00');
 
 --
 -- Índices para tablas volcadas
@@ -61,7 +63,7 @@ ALTER TABLE `noticias`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
