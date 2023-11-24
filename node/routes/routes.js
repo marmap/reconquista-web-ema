@@ -1,12 +1,12 @@
-import express from 'express';
-import noticia from '../models/noticia.js';
-import { mostrarNoticias, mostrarNoticia, crearNoticias, subirNoticia, eliminarNoticia } from '..agregarNoticia.js';
+import express from 'express'
+import { createBlog, deleteBlog, getAllBlogs, getBlog, updateBlog } from '../controllers/BlogController.js'
 
 const router = express.Router()
-router.get('/', mostrarNoticias)
-router.get('/:id', mostrarNoticia)
-router.post('/crearNoticia', crearNoticias)
-router.put('/:id', subirNoticia)
-router.delete('/:id', eliminarNoticia)
 
-export default router;
+router.get('/', getAllBlogs)
+router.get('/:id', getBlog)
+router.post('/', createBlog)
+router.put('/:id', updateBlog)
+router.delete('/:id', deleteBlog)
+
+export default router

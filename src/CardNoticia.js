@@ -4,45 +4,35 @@ import './styles/CardNoticia.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios'; 
 
+const URI = 'http:://localhost:8000/blogs/';
 const CardNoticia = () => {
-  const [noticias, setNoticias] = useState([{ id: 1 }]);
-  const [manualId, setManualId] = useState('1');
+  const [blogs, setBlogs] = useState([{ id: 1 }]);
+  
 
-  // Agrega la función para manejar los cambios en el ID manual
-  const handleManualIdChange = (e) => {
-    setManualId(e.target.value);
-  };
+
 
   useEffect(() => {
-    axios.get(`/noticias/${manualId}`) // Utiliza Axios para hacer la petición
-      .then(response => setNoticias([response.data]))
+    axios.get(`/blogs`) // Utiliza Axios para hacer la petición
+      .then(response => setBlogs([response.data]))
       .catch(error => console.error('Error:', error));
-  }, [manualId]);
+  },);
   
   return (
     <div>
+   
       <div>
-        <label htmlFor="manualId">ID Manual: </label>
-        <input
-          type="text"
-          id="manualId"
-          value={manualId}
-          onChange={handleManualIdChange}
-        />
-      </div>
-      <div>
-        {noticias.map(noticia => (
-          <div className="caja2" key={noticia.id}>
-            <img src={noticia.foto_url} className="img-thumbnail" alt="" />
+        {noticias.map(blog => (
+          <div className="caja2" key={id}>
+            <img src={blogs.foto_url} className="img-thumbnail" alt="" />
             <div className="caja">
-              <h5 className="titleN">{noticia.titulo}</h5>
-              <p className="description">{noticia.resumen}</p>
-              <p className="time">{noticia.fecha_publicacion}</p>
+              <h5 className="titleN">{blogs.titulo}</h5>
+              <p className="description">{blogs.resumen}</p>
+              <p className="time">{blogs.createdAt}</p>
               <div className="caja3">
                 <div className="botones">
                   <Link
                     className="read-button"
-                    to={`/noticia/${noticia.id}`}
+                    to={`/noticia/${blogs.id}`}
                     style={{
                       background: 'rgba(0, 0, 0, 0.6)',
                       width: '50px',
