@@ -10,6 +10,7 @@ import QuienesSomos from './QuienesSomos';
 import RedactarNoticia from './RedactarNoticia';
 import NoticiaIndividual from './NoticiaCuerpo';
 import AbrirSesion from './AbrirSesion';
+import CardNoticia from './CardNoticia';
 
 
 
@@ -24,7 +25,8 @@ function App() {
         <Route path="/RedactarNoticia" element={<RedactarNoticia />} />
         <Route path="/noticia/:id" element={<NoticiaIndividual />} />
         <Route path="*" element={<NotFound />} />
-        <Route path='/AbrirSesion' element={<AbrirSesion />}/>
+        <Route path="/AbrirSesion" element={<AbrirSesion />} />
+        <Route path="/CardNoticia" element={<CardNoticia />} />
       </Routes>
       <Footer />
     </div>
