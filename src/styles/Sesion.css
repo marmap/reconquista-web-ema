@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: Montaga;
 }
 
 form {
@@ -11,6 +12,7 @@ form {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  font-family: Montaga;
 }
 
 label {
@@ -20,15 +22,22 @@ label {
 input {
   margin-bottom: 10px;
   padding: 5px;
+  border-radius: 5px;
 }
 
 button {
   padding: 10px;
-  background-color: #61dafb;
+  background-color:  #8E0303;
   color: white;
   cursor: pointer;
+  font-family: Montaga;
+  border-radius: 5px;
+  font-size: 20px;
+  shadow:90px #8E0303;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 button:hover {
-  background-color: #4fa3d1;
+  background-color: white;
+  color:#8E0303;
 }

@@ -1,6 +1,6 @@
 // App.js
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Inicio from './Inicio';
 import NotFound from './NotFound';
 import Navbar from './Navbar';
@@ -15,20 +15,25 @@ import CardNoticia from './CardNoticia';
 
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
+
+  const PrivateRoute = ({ element, ...rest }) => (
+    isLoggedIn ? element : <Navigate to="/AbrirSesion" />
+  );
   return (
     <div>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/QuienesSomos" element={<QuienesSomos />} />
         <Route path="/Donar" element={<Donar />} />
-        <Route path="/RedactarNoticia" element={<RedactarNoticia />} />
+        <PrivateRoute path="/RedactarNoticia" element={<RedactarNoticia  />} />
         <Route path="/noticia/:id" element={<NoticiaIndividual />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/AbrirSesion" element={<AbrirSesion />} />
-        <Route path="/noticias" element={<CardNoticia />} />
+        <Route path="/AbrirSesion" element={<AbrirSesion setLoggedIn={setLoggedIn} />} />
+        <Route path="/noticias" element={<CardNoticia  isLoggedIn={isLoggedIn} />} />
       </Routes>
-      <Footer />
+      <Footer isLoggedIn={isLoggedIn} />
     </div>
   );
 }

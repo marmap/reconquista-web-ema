@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const URI = 'http://localhost:8000/blogs/';
 
-const CardNoticia = () => {
+const CardNoticia = ({ isLoggedIn }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -54,6 +54,7 @@ const CardNoticia = () => {
                 >
                   Leer
                 </Link>
+                {isLoggedIn && (
                 <Link
                   className="edit-button"
                   to={`/blogs/edit/${blog.id}`}
@@ -76,6 +77,7 @@ const CardNoticia = () => {
                 >
                   Editar
                 </Link>
+                )}
               </div>
             </div>
           </div>
