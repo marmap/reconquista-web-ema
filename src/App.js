@@ -26,7 +26,7 @@ function App() {
         <Route path="/noticia/:id" element={<NoticiaIndividual />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/AbrirSesion" element={<AbrirSesion />} />
-        <Route path="/CardNoticia" element={<CardNoticia />} />
+        <Route path="/noticias" element={<CardNoticia />} />
       </Routes>
       <Footer />
     </div>

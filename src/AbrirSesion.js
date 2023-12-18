@@ -22,7 +22,7 @@ function AbrirSesion() {
   };
 
   return(
-    <div className='AbrirSesion'>
+    <div className="AbrirSesion">
     <h1>Iniciar Sesión</h1>
     <form onSubmit={handleSubmit}>
     <label>

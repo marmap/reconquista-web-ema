@@ -4,21 +4,20 @@ import './styles/CardNoticia.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-// const URI = 'http://localhost:8000/blogs/';
+const URI = 'http://localhost:8000/blogs/';
 
 const CardNoticia = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        
-        const response = await axios.get('YOUR_API_ENDPOINT_HERE');
-        setBlogs(response.data); 
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(URI);
+          setBlogs(response.data); 
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
 
     fetchData();
   }, []);
