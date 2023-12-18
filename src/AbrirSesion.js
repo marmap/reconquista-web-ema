@@ -19,7 +19,7 @@ function AbrirSesion({ setLoggedIn }) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/node/routes/auth/', {
+      const response = await axios.post('http://localhost:8000/auth/login/', {
         username,
         password,
       });
