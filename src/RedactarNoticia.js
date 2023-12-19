@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './styles/RedactarNoticia.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const RedactarNoticia = () => {
+const RedactarNoticia = ({ isLoggedIn }) => {
   const [formData, setFormData] = useState({
     titulo: '',
     resumen: '',
-    cuerpo: '', // Este campo debe llamarse noticia en lugar de cuerpo
-    foto_url: '', // Agrega más campos si es necesario
+    noticia: '',  // Cambiado de 'cuerpo' a 'noticia'
+    foto_url: '',
   });
 
   const handleInputChange = (e) => {
@@ -62,10 +62,10 @@ const RedactarNoticia = () => {
         <input 
           className="content-box" 
           type="text" 
-          name="noticia"
+          name="noticia"  // Cambiado de 'cuerpo' a 'noticia'
           value={formData.noticia}
           onChange={handleInputChange}
-          placeholder="Noticia..."
+          placeholder="Cuerpo de texto completo..."
         />
         <div className="subtitle">Agrega una imagen</div>
         <input 
@@ -76,15 +76,16 @@ const RedactarNoticia = () => {
           onChange={handleInputChange}
           placeholder="URL de la imagen"
         />
-        <div className="button-container">
-          <button type="submit" className="button-box" id="myButton">
-            <div className="button-text">Publicar</div>
-          </button>
-        </div>
+        {isLoggedIn && (
+          <div className="button-container">
+            <button type="submit" className="button-box" id="myButton">
+              <div className="button-text">Publicar</div>
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );
 };
 
 export default RedactarNoticia;
-

@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/QuienesSomos" element={<QuienesSomos />} />
         <Route path="/Donar" element={<Donar />} />
-        <PrivateRoute path="/RedactarNoticia" element={<RedactarNoticia  />} />
+        <Route path="/RedactarNoticia" element={<PrivateRoute element={<RedactarNoticia />} />} />
         <Route path="/noticia/:id" element={<NoticiaIndividual />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/AbrirSesion" element={<AbrirSesion setLoggedIn={setLoggedIn} />} />
